@@ -1,0 +1,147 @@
+/* COLORES CBTis 165 */
+:root {
+  --guinda: #800000;
+  --dorado: #b8860b;
+  --blanco: #ffffff;
+  --gris-suave: #eeeeee;
+  --negro-suave: #333333;
+}
+
+/* 1. AJUSTES BÁSICOS */
+body {
+  background-color: var(--gris-suave);
+  color: var(--negro-suave);
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* 2. HEADER: Simple pero con borde doble para que resalte */
+header {
+  background-color: var(--guinda);
+  color: white;
+  text-align: center;
+  padding: 40px;
+  border-bottom: 10px double var(--dorado); /* Borde doble estilo elegante */
+}
+
+.logo {
+  height: 80px;
+  background-color: white;
+  padding: 5px;
+  border-radius: 5px;
+  margin: 0 10px;
+}
+
+/* 3. NAVEGACIÓN: En bloques horizontales */
+nav {
+  background-color: #555; /* Gris oscuro para contrastar */
+  text-align: center;
+  padding: 10px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  display: inline-block; /* Para que se comporten como botones */
+  font-weight: bold;
+}
+
+nav a:hover {
+  background-color: var(--guinda);
+  color: var(--dorado);
+}
+
+/* 4. HERO: Un cuadro con sombra */
+.hero {
+  background-color: white;
+  border: 2px solid var(--guinda);
+  margin: 20px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 10px 10px 0px var(--dorado); /* Sombra sólida, no borrosa */
+}
+
+/* 5. CARDS: Una debajo de otra pero bien separadas */
+.card {
+  background-color: white;
+  margin: 30px auto;
+  width: 80%;
+  padding: 20px;
+  border-left: 15px solid var(--guinda); /* Franja gruesa a la izquierda */
+  border-radius: 10px;
+  overflow: hidden; /* Para que nada se salga */
+}
+
+.imagen {
+  width: 200px;
+  float: left; /* La imagen se queda a la izquierda y el texto sube */
+  margin-right: 20px;
+  border: 3px solid var(--gris-suave);
+}
+
+/* Limpiar el float para que no se amontone la siguiente card */
+.card::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* 6. TABLA: Colores intercalados (Zebra) */
+.tabla-section {
+  padding: 20px;
+  background-color: white;
+  margin: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse; /* Quita los espacios entre bordes */
+}
+
+th {
+  background-color: var(--guinda);
+  color: white;
+  padding: 10px;
+}
+
+td {
+  padding: 10px;
+  border: 1px solid var(--gris-suave);
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2; /* Color gris claro a las filas pares */
+}
+
+/* 7. FORMULARIO: Centrado y limpio */
+.formulario {
+  background-color: var(--guinda);
+  color: white;
+  padding: 30px;
+  text-align: center;
+}
+
+.formulario input, .formulario select {
+  display: block; /* Uno debajo de otro */
+  width: 300px;
+  margin: 10px auto;
+  padding: 10px;
+  border: none;
+}
+
+.formulario input[type="submit"] {
+  background-color: var(--dorado);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* 8. FOOTER */
+footer {
+  background-color: var(--negro-suave);
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
